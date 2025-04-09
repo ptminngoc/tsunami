@@ -1163,7 +1163,7 @@ a.bttn:focus {
 }
 @media only screen and (max-width: 1366px) {
   .header .header-main .level1_h1 .level11 {
-    padding: 10px;
+    padding: 15px;
   }
 }
 .header .header-main .level1_h2 {
@@ -4835,7 +4835,7 @@ a.bttn:focus {
 /* end/ 23. COMMING-SOON-PAGE*/
 /* 24. FOOTER*/
 footer {
-  background-color: #111111;
+  background-color: black;
   padding: 80px 0 90px 0;
 }
 @media (max-width: 767px) {
@@ -7200,20 +7200,24 @@ footer form i {
   transition: color 0.3s ease;
 }
 
-.level11 a::after {
+.level11 a:hover {
+  color: #757575 !important;
+}
+
+/* .level11 a::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: -4px;
   left: 0;
-  background-color: white;
+  background-color: #757575 !important;
   transition: width 0.3s ease;
-}
+} */
 
-.level11 a:hover::after {
-  width: 100%;
-}
+/* .level11 a:hover::after {
+    width: 100%;
+  } */
 
 .search-icon {
   position: absolute;
@@ -7226,10 +7230,64 @@ footer form i {
 }
 
 .logo-container {
-  position: absolute;
-  bottom: 3rem;
-  left: 0;
-  width: 100vw;
+  width: 100%;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
+}
+
+form {
+  margin-left: 10rem;
+  border-radius: 10px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #757575;
+}
+
+.contact-form input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+}
+
+.contact-form input[type="submit"] {
+  width: 150px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #333;
+}
+
+.contact-form .captcha {
+  display: flex;
+  align-items: center;
+}
+
+.contact-form .captcha-code {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: monospace;
 }
