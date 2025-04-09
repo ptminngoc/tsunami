@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
 
   $(".js-tab-product").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     arrows: true,
     slidesToScroll: 1,
     dots: false,

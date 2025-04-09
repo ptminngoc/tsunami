@@ -1633,7 +1633,6 @@ a.bttn:focus {
 }
 .banner-h3 .item {
   position: relative;
-  margin-bottom: 10px;
 }
 .banner-h3 .item .img-bn {
   overflow: hidden;
@@ -3627,6 +3626,9 @@ a.bttn:focus {
   display: inline-block;
   text-align: center;
   outline: none;
+  width: 500px;
+  object-fit: cover;
+  height: 600px;
 }
 .product-tab-slide .tab-content .item .product .product-lable {
   position: absolute;
@@ -3776,7 +3778,7 @@ a.bttn:focus {
 }
 .product-tab-slide .tab-content .item .title .product-name a {
   font-weight: 400;
-  color: #333333;
+  color: #d4d4d4;
   font-size: 15px;
   text-decoration: none;
 }
@@ -3788,7 +3790,7 @@ a.bttn:focus {
 }
 .product-tab-slide .tab-content .item .title .prosuct-price b {
   font-weight: 400;
-  color: #333333;
+  color: #ea5e03;
   font-size: 13px;
   display: inline-block;
   margin-right: 15px;
@@ -7179,6 +7181,7 @@ footer form i {
 
 .container-input-search-products {
   width: 25%;
+  position: relative;
 }
 .input-search-products {
   border-radius: 99px;
@@ -7189,5 +7192,44 @@ footer form i {
 }
 
 .level11 a {
+  position: relative;
+  display: inline-block;
   color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.level11 a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.level11 a:hover::after {
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+  font-size: 16px;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }

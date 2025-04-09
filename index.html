@@ -37,11 +37,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <style>
       html,
       body {
-        background-color: black;
+        background-color: #171919;
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -84,6 +88,12 @@
               placeholder="Search for products"
               class="input-search-products"
             />
+            <div class="search-icon">
+              <span
+                class="fas fa-search"
+                style="width: 2rem; height: 2rem"
+              ></span>
+            </div>
           </div>
           <h1 style="font-size: 3.5rem; color: white" class="bonjour-font">
             TSUNAMI
@@ -99,9 +109,19 @@
             >
               <span
                 class="icon icon-ecommerce-basket"
-                style="width: 1rem; height: 1rem"
+                style="font-size: 32px"
               ></span>
-              <p>01</p>
+              <p
+                style="
+                  font-size: 16px;
+                  color: white;
+                  font-weight: 500;
+                  margin-left: 35px;
+                  margin-top: -10px;
+                "
+              >
+                01
+              </p>
             </a>
             <div class="submenu mini-cart">
               <h4 class="account">02 item</h4>
@@ -165,23 +185,35 @@
           </div>
         </div>
       </div>
-      <div class="clearfix">
+      <div
+        class="clearfix"
+        style="border-block: 1px solid white; margin-top: 2rem"
+      >
         <div class="container">
           <div style="display: flex; justify-content: center">
             <div class="header-main">
-              <ul class="level1 level1_h1 level1_h3">
+              <ul class="level1 level1_h1 level1_h3" style="margin: 0">
                 <li class="level11">
-                  <a href="#" style="color: white" class="montserrat-font"
+                  <a
+                    href="#"
+                    style="color: white; font-size: 1.6rem"
+                    class="montserrat-font"
                     >About</a
                   >
                 </li>
                 <li class="level11">
-                  <a href="#" style="color: white" class="montserrat-font"
+                  <a
+                    href="#"
+                    style="color: white; font-size: 1.6rem"
+                    class="montserrat-font"
                     >Celebrities</a
                   >
                 </li>
                 <li class="level11">
-                  <a href="#" style="color: white" class="montserrat-font"
+                  <a
+                    href="#"
+                    style="color: white; font-size: 1.6rem"
+                    class="montserrat-font"
                     >Collections</a
                   >
                   <div class="hover-menu-home">
@@ -213,49 +245,23 @@
                   </div>
                 </li>
                 <li class="level11">
-                  <a href="#" style="color: white" class="montserrat-font"
+                  <a
+                    href="#"
+                    style="color: white; font-size: 1.6rem"
+                    class="montserrat-font"
                     >Newest</a
                   >
                 </li>
                 <li class="level11">
-                  <a href="#" style="color: white" class="montserrat-font"
+                  <a
+                    href="#"
+                    style="color: white; font-size: 1.6rem"
+                    class="montserrat-font"
                     >Contact</a
                   >
                 </li>
               </ul>
             </div>
-            <ul>
-              <li class="btn-navbar-menu">
-                <a href="#"><span class="pe-7s-config"></span></a>
-                <div class="hover-menu-icon">
-                  <div class="list-menu">
-                    <h4>account</h4>
-                    <ul>
-                      <li><a href="#">Login</a></li>
-                      <li><a href="#">Register</a></li>
-                      <li><a href="#">Wishlist</a></li>
-                      <li><a href="#">Compare</a></li>
-                    </ul>
-                  </div>
-                  <div class="list-menu">
-                    <h4>currencies</h4>
-                    <ul>
-                      <li><a href="#">USD</a></li>
-                      <li><a href="#">EUR</a></li>
-                      <li><a href="#">GBP</a></li>
-                    </ul>
-                  </div>
-                  <div class="list-menu">
-                    <h4>languages</h4>
-                    <ul>
-                      <li><a href="#">ENGLISH</a></li>
-                      <li><a href="#">FRENCH</a></li>
-                      <li><a href="#">SPANISH</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -409,7 +415,8 @@
     <!-- end/header -->
     <!-- banner -->
     <section class="banner-h3">
-      <div class="container-fluid">
+      <div class="container-fluid" style="padding: 0 !important">
+        <!-- SECTION 1 -->
         <div class="row">
           <div class="col-md-12 a">
             <div class="item">
@@ -442,49 +449,34 @@
                   COMING SOON
                 </p>
               </div>
+              <div class="logo-container">
+                <div>
+                  <img src="assets/images/Logo.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row banner-h3-bt">
-          <div class="col-md-6 a">
-            <div class="item mg-item">
-              <div class="img-bn">
-                <img
-                  src="assets/images/Home_03/Banner2_Home3.png"
-                  alt=""
-                  class="img-responsive"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 a">
-            <div class="item mgl-item">
-              <div class="img-bn">
-                <a
-                  data-fancybox
-                  href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
-                >
-                  <div class="banner-video">
-                    <img
-                      src="assets/images/Home_03/Banner3_Home3.png"
-                      alt=""
-                      class="img-responsive"
-                    />
-                    <div class="play-video">
-                      <span class="pe-7s-play"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+
+        <!-- SECTION 2 -->
+        <div>
+          <img
+            src="assets/images/Home_03/section2.jpg"
+            alt=""
+            class="img-responsive"
+            style="width: 100%"
+          />
         </div>
       </div>
     </section>
     <!-- end/banner -->
     <!-- product -->
-    <section class="product-tab-slide" style="background-color: black">
-      <h3 style="color: white">our products</h3>
+    <section class="product-tab-slide" style="background-color: #171919">
+      <h3
+        style="color: white; margin: 0; padding-top: 4rem; padding-bottom: 5rem"
+      >
+        our products
+      </h3>
       <div class="tab-ul">
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active">
