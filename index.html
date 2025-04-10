@@ -1503,12 +1503,39 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="item item-content">
-              <div class="img-ctgr img-v3">
-                <img
-                  src="assets/images/Home_03/Category/item1.jpg"
-                  alt=""
-                  class="img-responsive"
-                />
+              <div class="img-ctgr img-v3" style="position: relative">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  paysinline
+                  id="myVideoCategory"
+                  style="width: 100%"
+                >
+                  <source src="assets/videos/Video3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  id="muteButtonCategory"
+                  onclick="toggleMuteCategory()"
+                  style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    background: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <i class="fas fa-volume-mute"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -1814,6 +1841,19 @@
       function toggleMute() {
         const video = document.getElementById("myVideo");
         const button = document.getElementById("muteButton");
+        video.muted = !video.muted;
+
+        // Change icon based on mute state
+        if (video.muted) {
+          button.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          button.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+      }
+
+      function toggleMuteCategory() {
+        const video = document.getElementById("myVideoCategory");
+        const button = document.getElementById("muteButtonCategory");
         video.muted = !video.muted;
 
         // Change icon based on mute state
