@@ -73,7 +73,7 @@
     <!-- header -->
     <header
       class="header header-h3"
-      style="background-color: black; padding-block: 2rem"
+      style="background-color: black; padding-top: 2rem"
     >
       <div class="container">
         <div
@@ -97,8 +97,8 @@
           </div>
           <a
             href="/"
-            style="font-size: 3.5rem; color: white"
-            class="bonjour-font"
+            style="font-size: 4rem; color: white; font-weight: 900"
+            class="montserrat-font"
           >
             TSUNAMI
           </a>
@@ -435,17 +435,27 @@
         <div class="row" style="margin: 0; padding: 0">
           <div class="col-md-12 a">
             <div class="item">
-              <div class="img-bn" style="width: 100%; height: 100vh">
-                <video autoplay loop muted>
+              <div
+                class="img-bn"
+                style="width: 100%; height: 100vh; position: relative"
+              >
+                <video autoplay loop muted paysinline id="myVideo">
                   <source src="assets/videos/Video1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                <button
+                  id="muteButton"
+                  onclick="toggleMute()"
+                  class="mute-icon"
+                >
+                  <i class="fas fa-volume-mute" style="font-size: large"></i>
+                </button>
               </div>
               <div
                 class="bonjour-font"
                 style="
                   position: absolute;
-                  top: 30%;
+                  top: 20%;
                   left: 0;
                   width: 100%;
                   display: flex;
@@ -466,7 +476,11 @@
 
                 <div class="logo-container">
                   <div>
-                    <img src="assets/images/Logo.png" alt="" />
+                    <img
+                      src="assets/images/Logo.png"
+                      alt=""
+                      style="width: 15rem; height: 15rem"
+                    />
                   </div>
                 </div>
               </div>
@@ -1480,12 +1494,11 @@
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category1_Home3.png"
+                  src="assets/images/Home_03/Category/item2.jpg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>bags</span>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -1503,12 +1516,11 @@
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category3_Home3.png"
+                  src="assets/images/Home_03/Category/item3.jpg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>Shoes & sandal</span>
             </div>
           </div>
         </div>
@@ -1519,48 +1531,44 @@
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category4_Home3.png"
+                  src="assets/images/Home_03/Category/item7.jpg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>mens tuits</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category5_Home3.png"
+                  src="assets/images/Home_03/Category/item4.jpg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>skirts</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category6_Home3.png"
+                  src="assets/images/Home_03/Category/item5.jpeg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>lookbook'17</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="item">
               <div class="img-ctgr">
                 <img
-                  src="assets/images/Home_03/Category7_Home3.png"
+                  src="assets/images/Home_03/Category/item6.jpeg"
                   alt=""
                   class="img-responsive"
                 />
               </div>
-              <span>accessories</span>
             </div>
           </div>
         </div>
@@ -1585,9 +1593,10 @@
                         <span class="last"></span> -->
                 <a href="#"
                   ><img
-                    src="assets/images/Home_03/Blog1_Home3.png"
+                    src="assets/images/Home_03/Blog/item1.webp"
                     alt=""
                     class="img-responsive"
+                    style="height: 388px; object-fit: cover"
                 /></a>
               </div>
               <div class="text-blog">
@@ -1607,9 +1616,10 @@
                         <span class="last"></span> -->
                 <a href="#"
                   ><img
-                    src="assets/images/Home_03/Blog2_Home3.png"
+                    src="assets/images/Home_03/Blog/item2.jpg"
                     alt=""
                     class="img-responsive"
+                    style="height: 388px; object-fit: cover"
                 /></a>
               </div>
               <div class="text-blog">
@@ -1629,9 +1639,10 @@
                         <span class="last"></span> -->
                 <a href="#"
                   ><img
-                    src="assets/images/Home_03/Blog3_Home3.png"
+                    src="assets/images/Home_03/Blog/item3.webp"
                     alt=""
                     class="img-responsive"
+                    style="height: 388px; object-fit: cover"
                 /></a>
               </div>
               <div class="text-blog">
@@ -1793,5 +1804,25 @@
     <script src="assets/js/bootstrap-slider.min.js"></script>
     <!-- Custom jQuery -->
     <script src="assets/js/main.js"></script>
+    <!-- Add Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script>
+      function toggleMute() {
+        const video = document.getElementById("myVideo");
+        const button = document.getElementById("muteButton");
+        video.muted = !video.muted;
+
+        // Change icon based on mute state
+        if (video.muted) {
+          button.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          button.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+      }
+    </script>
   </body>
 </html>
