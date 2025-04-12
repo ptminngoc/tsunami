@@ -621,7 +621,6 @@ jQuery(document).ready(function ($) {
       ddiff = new Date(dthen - dnow);
     }
     gsecs = Math.floor(ddiff.valueOf() / 1000);
-    this.CountBack(gsecs, this);
   };
   $.ENGO_CountDown.fn = $.ENGO_CountDown.prototype;
   $.ENGO_CountDown.fn.extend = $.ENGO_CountDown.extend = $.extend;
@@ -632,38 +631,6 @@ jQuery(document).ready(function ($) {
         s = "0" + s;
       }
       return "<b>" + s + "</b>";
-    },
-    CountBack: function (secs, self) {
-      var DisplayStr;
-      if (secs < 0) {
-        self.element.innerHTML =
-          '<div class="labelexpired"> ' + self.options.FinishMessage + "</div>";
-        return;
-      }
-      clearInterval(self.timer);
-      DisplayStr = self.options.DisplayFormat.replace(
-        /%%D%%/g,
-        self.calculateDate(secs, 86400, 100000)
-      );
-      DisplayStr = DisplayStr.replace(
-        /%%H%%/g,
-        self.calculateDate(secs, 3600, 24)
-      );
-      DisplayStr = DisplayStr.replace(
-        /%%M%%/g,
-        self.calculateDate(secs, 60, 60)
-      );
-      DisplayStr = DisplayStr.replace(
-        /%%S%%/g,
-        self.calculateDate(secs, 1, 60)
-      );
-      self.element.innerHTML = DisplayStr;
-      if (self.options.CountActive) {
-        self.timer = null;
-        self.timer = setTimeout(function () {
-          self.CountBack(secs + self.CountStepper, self);
-        }, self.SetTimeOutPeriod);
-      }
     },
   });
 
